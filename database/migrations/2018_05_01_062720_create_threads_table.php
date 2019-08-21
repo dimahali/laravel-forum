@@ -14,13 +14,16 @@ class CreateThreadsTable extends Migration
     public function up()
     {
         Schema::create('threads', function (Blueprint $table) {
+        	
             $table->increments('id');
 
             $table->integer('user_id');
 
             $table->string('title');
             $table->text('body');
+            
             $table->timestamps();
+            
         });
     }
 
